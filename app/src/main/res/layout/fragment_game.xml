@@ -9,109 +9,133 @@
             type="com.example.practiseproblems.GameFragment" />
     </data>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
 
-        <TextView
-            android:id="@+id/questionText"
-            android:layout_width="0dp"
+        android:background="@color/purple_700">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16sp"
-            android:fontFamily="sans-serif"
-            android:text="@{game.currentQuestion.text}"
-            android:textColor="@color/black"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:typeface="normal"
+            app:cardCornerRadius="32sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.144"
-            tools:text="What color is the Android mascot?" />
+            app:layout_constraintVertical_bias="0.297">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/questionText"
-            app:layout_constraintVertical_bias="0.132">
-
-            <Button
-                android:id="@+id/optionA"
-                android:background="@drawable/option_selected"
-                android:layout_width="match_parent"
-                android:layout_marginBottom="8sp"
-                android:layout_height="wrap_content"
-                android:text="ABCD"
-                android:textColor="@color/white"
-                tools:layout_editor_absoluteX="78dp"
-                tools:layout_editor_absoluteY="228dp" />
-
-            <Button
-                android:id="@+id/optionB"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8sp"
-                android:layout_marginTop="8sp"
-                android:background="@drawable/option_button"
-                android:text="@{game.answer[1]}"
-                tools:layout_editor_absoluteX="78dp"
-                tools:layout_editor_absoluteY="304dp" />
+                android:layout_margin="16sp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <Button
-                android:id="@+id/optionC"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/option_button"
-                android:layout_marginBottom="8sp"
-                android:layout_marginTop="8sp"
-                android:text="@{game.answer[2]}"
-                tools:layout_editor_absoluteX="78dp"
-                tools:layout_editor_absoluteY="395dp" />
+                <TextView
+                    android:id="@+id/questionText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16sp"
+                    android:fontFamily="sans-serif"
+                    android:text=""
+                    android:textColor="#5c6bc0"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:typeface="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:text="What color is the Android mascot?" />
 
-            <Button
-                android:id="@+id/optionD"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/option_button"
-                android:layout_marginBottom="8sp"
-                android:layout_marginTop="8sp"
-                android:text="@{game.answer[3]}"
-                tools:layout_editor_absoluteX="78dp"
-                tools:layout_editor_absoluteY="472dp" />
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16sp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/questionText"
+                    app:layout_constraintVertical_bias="0.132">
+
+                    <Button
+                        android:id="@+id/optionA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8sp"
+                        android:background="@drawable/option_selected"
+                        android:text="ABCD"
+                        android:textColor="@color/white"
+                        tools:layout_editor_absoluteX="78dp"
+                        tools:layout_editor_absoluteY="228dp" />
+
+                    <Button
+                        android:id="@+id/optionB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="8sp"
+                        android:background="@drawable/option_button"
+                        android:text="@{game.answer[1]}"
+                        tools:layout_editor_absoluteX="78dp"
+                        tools:layout_editor_absoluteY="304dp" />
+
+                    <Button
+                        android:id="@+id/optionC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="8sp"
+                        android:background="@drawable/option_button"
+                        android:text="@{game.answer[2]}"
+                        tools:layout_editor_absoluteX="78dp"
+                        tools:layout_editor_absoluteY="395dp" />
+
+                    <Button
+                        android:id="@+id/optionD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="8sp"
+                        android:background="@drawable/option_button"
+                        android:text="@{game.answer[3]}"
+                        tools:layout_editor_absoluteX="78dp"
+                        tools:layout_editor_absoluteY="472dp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/questionNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:text="ABCDEFGH"
-            android:textColor="@color/grey"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/questionText"
+            app:layout_constraintBottom_toTopOf="@+id/cardView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.055"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.777" />
+            app:layout_constraintVertical_bias="0.747" />
 
         <TextView
             android:id="@+id/totalQues"
             android:layout_width="51dp"
             android:layout_height="26dp"
             android:text="TextView"
+            android:textColor="@color/grey"
             app:layout_constraintBaseline_toBaselineOf="@+id/questionNo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

@@ -18,7 +18,7 @@ class GameFragment : Fragment() {
 
     private var questions: MutableList<Question> = mutableListOf(
         Question(
-            text = "",
+            text = "What is the color of android Mascot?",
             answers = listOf()
         ),
         Question(
@@ -63,7 +63,7 @@ class GameFragment : Fragment() {
         ),
     )
 
-    lateinit var currentQuestion: Question
+    var currentQuestion: Question = questions[0]
     lateinit var answer: MutableList<String>
     private var questionIndex = 0
     private var numQuestion = 2
@@ -76,6 +76,8 @@ class GameFragment : Fragment() {
             inflater,
             R.layout.fragment_game, container, false
         )
+
+        binding.questionText.setText(questions[0].text)
 
         val msg = "Question " + (questionIndex+1)
         binding.questionNo.setText(msg)
