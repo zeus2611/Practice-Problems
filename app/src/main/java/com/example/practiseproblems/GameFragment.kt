@@ -265,6 +265,10 @@ class GameFragment : Fragment() {
     lateinit var answer: MutableList<String>
     private var questionIndex = 0
     private var numQuestion = 2
+    var correctAns = 0
+    var wrongAns = 0
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -279,15 +283,72 @@ class GameFragment : Fragment() {
 
         binding.game = this
 
-//        binding.questionText.setText(currentQuestion.text)
-
-
-        binding.optionD.setBackgroundResource(R.drawable.option_selected)
-
-
-        val msg = "Question " + (questionIndex+1)
-        binding.questionNo.setText(msg)
+        binding.questionNo.setText("Question " + (questionIndex+1))
         binding.totalQues.setText("/ " + numQuestion)
+
+        var answerIndex = 0
+
+        binding.optionA.setOnClickListener { view: View ->
+            binding.optionA.setBackgroundResource(R.drawable.option_selected)
+            binding.optionB.setBackgroundResource(R.drawable.option_button)
+            binding.optionC.setBackgroundResource(R.drawable.option_button)
+            binding.optionD.setBackgroundResource(R.drawable.option_button)
+            answerIndex = 1;
+        }
+        binding.optionB.setOnClickListener { view: View ->
+            binding.optionA.setBackgroundResource(R.drawable.option_button)
+            binding.optionB.setBackgroundResource(R.drawable.option_selected)
+            binding.optionC.setBackgroundResource(R.drawable.option_button)
+            binding.optionD.setBackgroundResource(R.drawable.option_button)
+            answerIndex = 2;
+        }
+        binding.optionC.setOnClickListener { view: View ->
+            binding.optionA.setBackgroundResource(R.drawable.option_button)
+            binding.optionB.setBackgroundResource(R.drawable.option_button)
+            binding.optionC.setBackgroundResource(R.drawable.option_selected)
+            binding.optionD.setBackgroundResource(R.drawable.option_button)
+            answerIndex = 3;
+        }
+        binding.optionD.setOnClickListener { view: View ->
+            binding.optionA.setBackgroundResource(R.drawable.option_button)
+            binding.optionB.setBackgroundResource(R.drawable.option_button)
+            binding.optionC.setBackgroundResource(R.drawable.option_button)
+            binding.optionD.setBackgroundResource(R.drawable.option_selected)
+            answerIndex = 4;
+        }
+
+
+        binding.nextButton.setOnClickListener { view: View ->
+            if(answerIndex == 0){
+                questionIndex++
+                if (questionIndex < numQuestion) {
+                    setQuestion()
+                    binding.invalidateAll()
+                }
+            }
+            else{
+                questionIndex++
+                if(answer[answerIndex-1] == currentQuestion.answers[0]){
+                    correctAns++
+                }
+                else{
+                    wrongAns++
+                }
+                if (questionIndex < numQuestion) {
+                    setQuestion()
+                    binding.invalidateAll()
+                }
+            }
+            answerIndex = 0
+            binding.optionA.setBackgroundResource(R.drawable.option_button)
+            binding.optionB.setBackgroundResource(R.drawable.option_button)
+            binding.optionC.setBackgroundResource(R.drawable.option_button)
+            binding.optionD.setBackgroundResource(R.drawable.option_button)
+            if (questionIndex < numQuestion) {
+                binding.questionNo.setText("Question " + (questionIndex+1))
+                binding.totalQues.setText("/ " + numQuestion)
+            }
+        }
 
         return binding.root
     }
