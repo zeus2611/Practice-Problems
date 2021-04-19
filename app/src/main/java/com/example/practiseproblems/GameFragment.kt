@@ -40,48 +40,228 @@ class GameFragment : Fragment() {
             answers = listOf("A", "B", "C", "D")
         ),
         Question(
-            text = "What is the color of android Mascot?",
-            answers = listOf()
+            text = "Predict the output of below C++ programs.\n" +
+                    "// Assume that integers take 4 bytes.\n" +
+                    "#include<iostream>\n" +
+                    "  \n" +
+                    "using namespace std;   \n" +
+                    "  \n" +
+                    "class Test\n" +
+                    "{\n" +
+                    "  static int i;\n" +
+                    "  int j;\n" +
+                    "};\n" +
+                    "  \n" +
+                    "int Test::i;\n" +
+                    "  \n" +
+                    "int main()\n" +
+                    "{\n" +
+                    "    cout << sizeof(Test);\n" +
+                    "    return 0;\n" +
+                    "}",
+            answers = listOf("A", "B", "C", "D")
         ),
         Question(
-            text = "",
-            answers = listOf()
+            text = "Predict the output of below C++ programs.\n" +
+                    "// Assume that integers take 4 bytes.\n" +
+                    "#include<iostream>\n" +
+                    "  \n" +
+                    "using namespace std;   \n" +
+                    "  \n" +
+                    "class Test\n" +
+                    "{\n" +
+                    "  static int i;\n" +
+                    "  int j;\n" +
+                    "};\n" +
+                    "  \n" +
+                    "int Test::i;\n" +
+                    "  \n" +
+                    "int main()\n" +
+                    "{\n" +
+                    "    cout << sizeof(Test);\n" +
+                    "    return 0;\n" +
+                    "}",
+            answers = listOf("A", "B", "C", "D")
         ),
         Question(
-            text = "",
-            answers = listOf()
+            text = "Predict the output of below C++ programs.\n" +
+                    "// Assume that integers take 4 bytes.\n" +
+                    "#include<iostream>\n" +
+                    "  \n" +
+                    "using namespace std;   \n" +
+                    "  \n" +
+                    "class Test\n" +
+                    "{\n" +
+                    "  static int i;\n" +
+                    "  int j;\n" +
+                    "};\n" +
+                    "  \n" +
+                    "int Test::i;\n" +
+                    "  \n" +
+                    "int main()\n" +
+                    "{\n" +
+                    "    cout << sizeof(Test);\n" +
+                    "    return 0;\n" +
+                    "}",
+            answers = listOf("A", "B", "C", "D")
         ),
         Question(
-            text = "",
-            answers = listOf()
+            text = "Predict the output of below C++ programs.\n" +
+                    "// Assume that integers take 4 bytes.\n" +
+                    "#include<iostream>\n" +
+                    "  \n" +
+                    "using namespace std;   \n" +
+                    "  \n" +
+                    "class Test\n" +
+                    "{\n" +
+                    "  static int i;\n" +
+                    "  int j;\n" +
+                    "};\n" +
+                    "  \n" +
+                    "int Test::i;\n" +
+                    "  \n" +
+                    "int main()\n" +
+                    "{\n" +
+                    "    cout << sizeof(Test);\n" +
+                    "    return 0;\n" +
+                    "}",
+            answers = listOf("A", "B", "C", "D")
         ),
         Question(
-            text = "",
-            answers = listOf()
+            text = "Predict the output of below C++ programs.\n" +
+                    "// Assume that integers take 4 bytes.\n" +
+                    "#include<iostream>\n" +
+                    "  \n" +
+                    "using namespace std;   \n" +
+                    "  \n" +
+                    "class Test\n" +
+                    "{\n" +
+                    "  static int i;\n" +
+                    "  int j;\n" +
+                    "};\n" +
+                    "  \n" +
+                    "int Test::i;\n" +
+                    "  \n" +
+                    "int main()\n" +
+                    "{\n" +
+                    "    cout << sizeof(Test);\n" +
+                    "    return 0;\n" +
+                    "}",
+            answers = listOf("A", "B", "C", "D")
         ),
         Question(
-            text = "",
-            answers = listOf()
+            text = "Predict the output of below C++ programs.\n" +
+                    "// Assume that integers take 4 bytes.\n" +
+                    "#include<iostream>\n" +
+                    "  \n" +
+                    "using namespace std;   \n" +
+                    "  \n" +
+                    "class Test\n" +
+                    "{\n" +
+                    "  static int i;\n" +
+                    "  int j;\n" +
+                    "};\n" +
+                    "  \n" +
+                    "int Test::i;\n" +
+                    "  \n" +
+                    "int main()\n" +
+                    "{\n" +
+                    "    cout << sizeof(Test);\n" +
+                    "    return 0;\n" +
+                    "}",
+            answers = listOf("A", "B", "C", "D")
         ),
         Question(
-            text = "",
-            answers = listOf()
+            text = "Predict the output of below C++ programs.\n" +
+                    "// Assume that integers take 4 bytes.\n" +
+                    "#include<iostream>\n" +
+                    "  \n" +
+                    "using namespace std;   \n" +
+                    "  \n" +
+                    "class Test\n" +
+                    "{\n" +
+                    "  static int i;\n" +
+                    "  int j;\n" +
+                    "};\n" +
+                    "  \n" +
+                    "int Test::i;\n" +
+                    "  \n" +
+                    "int main()\n" +
+                    "{\n" +
+                    "    cout << sizeof(Test);\n" +
+                    "    return 0;\n" +
+                    "}",
+            answers = listOf("A", "B", "C", "D")
         ),
         Question(
-            text = "",
-            answers = listOf()
+            text = "Predict the output of below C++ programs.\n" +
+                    "// Assume that integers take 4 bytes.\n" +
+                    "#include<iostream>\n" +
+                    "  \n" +
+                    "using namespace std;   \n" +
+                    "  \n" +
+                    "class Test\n" +
+                    "{\n" +
+                    "  static int i;\n" +
+                    "  int j;\n" +
+                    "};\n" +
+                    "  \n" +
+                    "int Test::i;\n" +
+                    "  \n" +
+                    "int main()\n" +
+                    "{\n" +
+                    "    cout << sizeof(Test);\n" +
+                    "    return 0;\n" +
+                    "}",
+            answers = listOf("A", "B", "C", "D")
         ),
         Question(
-            text = "",
-            answers = listOf()
+            text = "Predict the output of below C++ programs.\n" +
+                    "// Assume that integers take 4 bytes.\n" +
+                    "#include<iostream>\n" +
+                    "  \n" +
+                    "using namespace std;   \n" +
+                    "  \n" +
+                    "class Test\n" +
+                    "{\n" +
+                    "  static int i;\n" +
+                    "  int j;\n" +
+                    "};\n" +
+                    "  \n" +
+                    "int Test::i;\n" +
+                    "  \n" +
+                    "int main()\n" +
+                    "{\n" +
+                    "    cout << sizeof(Test);\n" +
+                    "    return 0;\n" +
+                    "}",
+            answers = listOf("A", "B", "C", "D")
         ),
         Question(
-            text = "",
-            answers = listOf()
+            text = "Predict the output of below C++ programs.\n" +
+                    "// Assume that integers take 4 bytes.\n" +
+                    "#include<iostream>\n" +
+                    "  \n" +
+                    "using namespace std;   \n" +
+                    "  \n" +
+                    "class Test\n" +
+                    "{\n" +
+                    "  static int i;\n" +
+                    "  int j;\n" +
+                    "};\n" +
+                    "  \n" +
+                    "int Test::i;\n" +
+                    "  \n" +
+                    "int main()\n" +
+                    "{\n" +
+                    "    cout << sizeof(Test);\n" +
+                    "    return 0;\n" +
+                    "}",
+            answers = listOf("A", "B", "C", "D")
         ),
     )
 
-    var currentQuestion: Question = questions[0]
+    lateinit var currentQuestion: Question
     lateinit var answer: MutableList<String>
     private var questionIndex = 0
     private var numQuestion = 2
@@ -95,14 +275,13 @@ class GameFragment : Fragment() {
             R.layout.fragment_game, container, false
         )
 
-        binding.questionText.setText(questions[0].text)
+        randomizeQuestions()
 
-        answer = currentQuestion.answers.toMutableList()
+        binding.game = this
 
-        binding.optionA.setText(answer[0])
-        binding.optionB.setText(answer[1])
-        binding.optionC.setText(answer[2])
-        binding.optionD.setText(answer[3])
+//        binding.questionText.setText(currentQuestion.text)
+
+
         binding.optionD.setBackgroundResource(R.drawable.option_selected)
 
 
@@ -111,6 +290,18 @@ class GameFragment : Fragment() {
         binding.totalQues.setText("/ " + numQuestion)
 
         return binding.root
+    }
+
+    private fun randomizeQuestions() {
+        questions.shuffle()
+        questionIndex = 0
+        setQuestion()
+    }
+
+    private fun setQuestion(){
+        currentQuestion = questions[questionIndex]
+        answer = currentQuestion.answers.toMutableList()
+        answer.shuffle()
     }
 
 }

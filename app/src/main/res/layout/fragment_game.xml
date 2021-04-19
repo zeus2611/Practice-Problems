@@ -52,7 +52,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="16sp"
                             android:fontFamily="sans-serif"
-                            android:text=""
+                            android:text="@{game.currentQuestion.text}"
                             android:textColor="#5c6bc0"
                             android:textSize="16sp"
                             android:textStyle="bold"
@@ -71,7 +71,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="8sp"
                                 android:background="@drawable/option_selected"
-                                android:text="ABCD"
+                                android:text="@{game.answer[0]}"
                                 android:textColor="@color/white"
                                 tools:layout_editor_absoluteX="78dp"
                                 tools:layout_editor_absoluteY="228dp" />
@@ -83,7 +83,7 @@
                                 android:layout_marginTop="8sp"
                                 android:layout_marginBottom="8sp"
                                 android:background="@drawable/option_button"
-                                android:text=""
+                                android:text="@{game.answer[1]}"
                                 android:textColor="@color/white"
                                 tools:layout_editor_absoluteX="78dp"
                                 tools:layout_editor_absoluteY="304dp" />
@@ -95,7 +95,7 @@
                                 android:layout_marginTop="8sp"
                                 android:layout_marginBottom="8sp"
                                 android:background="@drawable/option_button"
-                                android:text=""
+                                android:text="@{game.answer[2]}"
                                 android:textColor="@color/white"
                                 tools:layout_editor_absoluteX="78dp"
                                 tools:layout_editor_absoluteY="395dp" />
@@ -107,7 +107,7 @@
                                 android:layout_marginTop="8sp"
                                 android:layout_marginBottom="8sp"
                                 android:background="@drawable/option_button"
-                                android:text=""
+                                android:text="@{game.answer[3]}"
                                 android:textColor="@color/white"
                                 tools:layout_editor_absoluteX="78dp"
                                 tools:layout_editor_absoluteY="472dp" />
