@@ -62,7 +62,7 @@
                                 android:id="@+id/cppPlay"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/rounded_button"
+                                android:background="@drawable/option_button"
                                 android:text="Play"
                                 android:textColor="@color/white"
                                 android:textSize="20sp"
