@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.practiseproblems.databinding.FragmentGameBinding
-import com.example.practiseproblems.databinding.FragmentHomeBinding
 
 class GameFragment : Fragment() {
 
@@ -293,6 +293,8 @@ class GameFragment : Fragment() {
             binding.optionB.setBackgroundResource(R.drawable.option_button)
             binding.optionC.setBackgroundResource(R.drawable.option_button)
             binding.optionD.setBackgroundResource(R.drawable.option_button)
+            binding.nextButton.setBackgroundResource(R.drawable.option_selected)
+            binding.submitButton.setBackgroundResource(R.drawable.option_selected)
             answerIndex = 1;
         }
         binding.optionB.setOnClickListener { view: View ->
@@ -300,6 +302,8 @@ class GameFragment : Fragment() {
             binding.optionB.setBackgroundResource(R.drawable.option_selected)
             binding.optionC.setBackgroundResource(R.drawable.option_button)
             binding.optionD.setBackgroundResource(R.drawable.option_button)
+            binding.nextButton.setBackgroundResource(R.drawable.option_selected)
+            binding.submitButton.setBackgroundResource(R.drawable.option_selected)
             answerIndex = 2;
         }
         binding.optionC.setOnClickListener { view: View ->
@@ -307,6 +311,8 @@ class GameFragment : Fragment() {
             binding.optionB.setBackgroundResource(R.drawable.option_button)
             binding.optionC.setBackgroundResource(R.drawable.option_selected)
             binding.optionD.setBackgroundResource(R.drawable.option_button)
+            binding.nextButton.setBackgroundResource(R.drawable.option_selected)
+            binding.submitButton.setBackgroundResource(R.drawable.option_selected)
             answerIndex = 3;
         }
         binding.optionD.setOnClickListener { view: View ->
@@ -314,10 +320,14 @@ class GameFragment : Fragment() {
             binding.optionB.setBackgroundResource(R.drawable.option_button)
             binding.optionC.setBackgroundResource(R.drawable.option_button)
             binding.optionD.setBackgroundResource(R.drawable.option_selected)
+            binding.nextButton.setBackgroundResource(R.drawable.option_selected)
+            binding.submitButton.setBackgroundResource(R.drawable.option_selected)
             answerIndex = 4;
         }
 
+        binding.backButton.visibility = View.GONE
 
+        //Next Button Function
         binding.nextButton.setOnClickListener { view: View ->
             if(answerIndex == 0){
                 questionIndex++
@@ -344,10 +354,35 @@ class GameFragment : Fragment() {
             binding.optionB.setBackgroundResource(R.drawable.option_button)
             binding.optionC.setBackgroundResource(R.drawable.option_button)
             binding.optionD.setBackgroundResource(R.drawable.option_button)
+            binding.nextButton.setBackgroundResource(R.drawable.option_button)
+            binding.submitButton.setBackgroundResource(R.drawable.option_button)
             if (questionIndex < numQuestion) {
                 binding.questionNo.setText("Question " + (questionIndex+1))
                 binding.totalQues.setText("/ " + numQuestion)
             }
+            if(questionIndex+1 == numQuestion){
+                binding.nextButton.visibility = View.GONE
+                binding.submitButton.visibility = View.VISIBLE
+            }
+            binding.backButton.visibility = View.VISIBLE
+        }
+
+        //Back Button Function
+        binding.backButton.setOnClickListener { view: View ->
+            backQuestion()
+            binding.invalidateAll()
+            if(questionIndex == 0){
+                binding.backButton.visibility = View.GONE
+            }
+            binding.nextButton.visibility = View.VISIBLE
+            binding.submitButton.visibility = View.GONE
+            binding.questionNo.setText("Question " + (questionIndex+1))
+            binding.totalQues.setText("/ " + numQuestion)
+        }
+
+//        Submit Button Function
+        binding.submitButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_gameFragment_to_resultFragment22)
         }
 
         return binding.root
@@ -363,6 +398,11 @@ class GameFragment : Fragment() {
         currentQuestion = questions[questionIndex]
         answer = currentQuestion.answers.toMutableList()
         answer.shuffle()
+    }
+
+    private fun backQuestion(){
+        questionIndex--
+        setQuestion()
     }
 
 }
